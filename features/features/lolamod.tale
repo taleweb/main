@@ -1,0 +1,9 @@
+[TALEFEATURE]
+mod_title="Lola Mod"
+
+mod_description="Allows you to move Lola's clone even when not moving."
+mod_description_tr="Lola'nın klonunu hareket etmezken bile hareket ettirmeye yarar"
+
+tags=["TALE+", "EXPLOIT", "BATTLE"]
+
+videos=["../videos/lolamod.mp4"]

@@ -1,0 +1,7 @@
+[TALEFEATURE]
+mod_title="Random Spray Spam"
+
+mod_description="Allows you to automatically spam random sprays in match."
+mod_description_tr="Maçta rastgele sprey spamı yapmanıza yarar."
+
+tags=["BATTLE"]

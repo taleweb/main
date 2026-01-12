@@ -1,0 +1,9 @@
+[TALEFEATURE]
+mod_title="Willow Mod"
+
+mod_description="When you control someone with Willow it allows you to use the persons super for yourself/your team"
+mod_description_tr="Willow ile birini kontrol ederken onun ayrıca süperini kendin veya takımın için kullanmana yarar."
+
+tags=["TALE+", "EXPLOIT", "BATTLE"]
+
+videos=["../videos/willowmod.mp4"]

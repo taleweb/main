@@ -1,0 +1,7 @@
+[TALEFEATURE]
+mod_title="Spectators Menu"
+
+mod_description="It allows you to visually adjust the number of spectators."
+mod_description_tr="İzleyici sayısını görsel olarak ayarlamanıza yarar."
+
+tags=["VISUAL", "BATTLE"]

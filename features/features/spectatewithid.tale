@@ -1,0 +1,7 @@
+[TALEFEATURE]
+mod_title="Spectate with ID"
+
+mod_description="It allows you to spectate anyone with their ids."
+mod_description_tr="ID ile istediğiniz kişinin maçını izlemenize yarar."
+
+tags=["GENERAL"]

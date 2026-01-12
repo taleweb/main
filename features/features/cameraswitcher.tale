@@ -1,0 +1,9 @@
+[TALEFEATURE]
+mod_title="Camera Switcher"
+
+mod_description="It allows you to switch camera."
+mod_description_tr="Kamerayı değiştirmenize yarar."
+
+tags=["TALE+", "BATTLE"]
+
+videos=["../videos/cameraswitcher.mp4"]

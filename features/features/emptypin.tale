@@ -1,0 +1,9 @@
+[TALEFEATURE]
+mod_title="Empty Pin"
+
+mod_description="When you send the 5th pin in a match it sends a blank pin and everyone can see."
+mod_description_tr="5. pin'i gönderdiğinizde boş bir pin gönderir ve herkes görebilir."
+
+tags=["EXPLOIT", "BATTLE"]
+
+photos=["../photos/emptypin.png"]

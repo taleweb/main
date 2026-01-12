@@ -1,0 +1,9 @@
+[TALEFEATURE]
+mod_title="Kill Aura"
+
+mod_description="When the enemy appears at a certain distance it attacks them without manual aiming"
+mod_description_tr="Düşman belirli bir mesafede göründüğünde, manuel nişan almaya gerek kalmadan otomatik saldırır."
+
+tags=["TALE+", "BATTLE"]
+
+videos=["../videos/killaura.mp4"]

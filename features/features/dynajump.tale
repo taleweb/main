@@ -1,0 +1,9 @@
+[TALEFEATURE]
+mod_title="Dyna Jump"
+
+mod_description="It allows you to jump automatically 4 times every time you click the button with Dynamike"
+mod_description_tr="Her butona tıkladığınızda Dynamike ile 4 kez zıplamanıza yarar"
+
+tags=["TALE+", "BATTLE"]
+
+videos=["../videos/dynajump.mov"]

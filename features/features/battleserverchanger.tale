@@ -1,0 +1,9 @@
+[TALEFEATURE]
+mod_title="Battle Server Changer"
+
+mod_description="It allows you to switch to any battle server."
+mod_description_tr="İstediğiniz savaş sunucusuna geçmenizi sağlar."
+
+tags=["GENERAL"]
+
+photos=["../photos/battleserverchanger.png"]

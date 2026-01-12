@@ -1,0 +1,7 @@
+[TALEFEATURE]
+mod_title="Anti Autosuper"
+
+mod_description="Disables Auto Super, needing manual aim to use super."
+mod_description_tr="Oto ultiyi engeller, ulti kullanmak için manuel aim gerekir."
+
+tags=["BATTLE"]

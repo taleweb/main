@@ -1,0 +1,7 @@
+[TALEFEATURE]
+mod_title="Name Changer"
+
+mod_description="It allows you to change your name visually."
+mod_description_tr="İsminizi görsel olarak değiştirmenize yarar."
+
+tags=["GENERAL", "VISUAL"]

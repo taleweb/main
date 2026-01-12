@@ -1,0 +1,9 @@
+[TALEFEATURE]
+mod_title="Auto Spinner"
+
+mod_description="Spins automatically."
+mod_description_tr="Otomatik etrafında döner."
+
+tags=["TALE+", "BATTLE"]
+
+videos=["../videos/autospinner.mp4"]

@@ -1,0 +1,7 @@
+[TALEFEATURE]
+mod_title="Show Enemy Ammo"
+
+mod_description="It allows you to see enemies ammo bar."
+mod_description_tr="Düşmanların mermi barını görmenize yarar."
+
+tags=["BATTLE"]

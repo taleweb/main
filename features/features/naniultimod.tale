@@ -1,0 +1,9 @@
+[TALEFEATURE]
+mod_title="Nani Ulti Mod"
+
+mod_description="Allows you to move Nani instead of the peep while using her super."
+mod_description_tr="Nani'nin ultisini kullanırken peep yerine nani'yi kontrol etmenizi sağlar."
+
+tags=["EXPLOIT", "BATTLE"]
+
+videos=["../videos/naniultimod.mp4"]

@@ -1,0 +1,9 @@
+[TALEFEATURE]
+mod_title="Auto Charge"
+
+mod_description="Auto charging Janet, Hank, and Angelo's range to max range"
+mod_description_tr="Janet, Hank ve Angelo'nun şarjını otomatik doldurur."
+
+tags=["TALE+", "BATTLE"]
+
+videos=["../videos/autocharge.mp4"]
