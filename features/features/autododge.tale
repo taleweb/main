@@ -6,4 +6,4 @@ mod_description_tr="Mermilerden otomatik olarak kaçar."
 
 tags=["TALE+", "BATTLE"]
 
-videos=["../videos/autododge.mov", "../videos/autododge2.mov"]
+videos=["https://talemods.com/features/videos/autododge.mov", "https://talemods.com/features/videos/autododge2.mov"]

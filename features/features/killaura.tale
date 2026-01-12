@@ -6,4 +6,4 @@ mod_description_tr="Düşman belirli bir mesafede göründüğünde, manuel niş
 
 tags=["TALE+", "BATTLE"]
 
-videos=["../videos/killaura.mp4"]
+videos=["https://talemods.com/features/videos/killaura.mp4"]

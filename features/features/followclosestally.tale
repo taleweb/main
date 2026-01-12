@@ -6,4 +6,4 @@ mod_description_tr="En yakın takım arkadaşınızı takip eder."
 
 tags=["TALE+", "BATTLE"]
 
-videos=["../videos/followclosestally.mp4"]
+videos=["https://talemods.com/features/videos/followclosestally.mp4"]

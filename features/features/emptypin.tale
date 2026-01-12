@@ -6,4 +6,4 @@ mod_description_tr="5. pin'i gönderdiğinizde boş bir pin gönderir ve herkes 
 
 tags=["EXPLOIT", "BATTLE"]
 
-photos=["../photos/emptypin.png"]
+photos=["https://talemods.com/features/photos/emptypin.png"]
