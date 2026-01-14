@@ -608,7 +608,16 @@
                 }
             }
         }
-        init() { var lang = this.cookies.get('lang') || 'en'; this.state.set('currentLang', lang); this.updateActive(lang); }
+        init() {
+            var lang = this.cookies.get('lang');
+            if (!lang) {
+                var browserLang = (navigator.language || navigator.userLanguage || 'en').toLowerCase().split('-')[0];
+                lang = (browserLang === 'tr' || browserLang === 'ru') ? browserLang : 'en';
+                this.cookies.set('lang', lang);
+            }
+            this.state.set('currentLang', lang);
+            this.updateActive(lang);
+        }
     }
 
     class Lightbox extends Modal {
