@@ -3,6 +3,7 @@ mod_title="Auto Dodge"
 
 mod_description="Automatically dodges bullets."
 mod_description_tr="Mermilerden otomatik olarak kaçar."
+mod_description_ru="Автоматически уклоняется от пуль."
 
 tags=["TALE+", "BATTLE"]
 
