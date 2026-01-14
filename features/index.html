@@ -683,14 +683,15 @@
             super(el);
             this.state = state; this.emitter = emitter;
             this.btns = this.el.querySelectorAll('.tag-filter');
+            this.validTags = ['ALL', 'TALE+', 'GENERAL', 'BATTLE', 'EXPLOIT', 'VISUAL'];
             var self = this;
             for (var i = 0; i < this.btns.length; i++) {
                 (function(btn) {
-                    btn.addEventListener('click', function() { self.setFilter(btn.dataset.tag); });
+                    btn.addEventListener('click', function() { self.setFilter(btn.dataset.tag, false); });
                 })(this.btns[i]);
             }
         }
-        setFilter(tag) {
+        setFilter(tag, fromHash) {
             this.state.set('currentFilter', tag);
             for (var i = 0; i < this.btns.length; i++) {
                 if (this.btns[i].dataset.tag === tag) {
@@ -699,7 +700,21 @@
                     this.btns[i].classList.remove('active');
                 }
             }
+            if (!fromHash) {
+                if (tag === 'ALL') {
+                    history.pushState(null, '', window.location.pathname + window.location.search);
+                } else {
+                    history.pushState(null, '', '#' + tag.toLowerCase());
+                }
+            }
             this.emitter.emit('filter:changed', tag);
+        }
+        isValidTag(hash) {
+            var upperHash = hash.toUpperCase();
+            return this.validTags.indexOf(upperHash) !== -1;
+        }
+        getTagFromHash(hash) {
+            return hash.toUpperCase();
         }
     }
 
@@ -880,10 +895,11 @@
     }
 
     class NavigationController {
-        constructor(mainPage, featureDetail, state) { 
+        constructor(mainPage, featureDetail, state, tagFilter) { 
             this.mainPage = mainPage; 
             this.featureDetail = featureDetail; 
             this.state = state;
+            this.tagFilter = tagFilter;
             this.bindHashChange();
         }
         bindHashChange() {
@@ -893,15 +909,28 @@
         }
         handleHash() {
             var hash = window.location.hash.slice(1);
-            if (hash && this.state.getFeature(hash)) {
-                this.showDetail(hash, true);
-            } else if (!hash) {
+            if (!hash) {
+                this.tagFilter.setFilter('ALL', true);
                 this.showMain(true);
+            } else if (this.tagFilter.isValidTag(hash)) {
+                this.tagFilter.setFilter(this.tagFilter.getTagFromHash(hash), true);
+                this.showMain(true);
+            } else if (this.state.getFeature(hash)) {
+                this.showDetail(hash, true);
             }
         }
         checkInitialHash() {
             var hash = window.location.hash.slice(1);
-            if (hash && this.state.getFeature(hash)) {
+            if (!hash) {
+                return false;
+            }
+
+            if (this.tagFilter.isValidTag(hash)) {
+                this.tagFilter.setFilter(this.tagFilter.getTagFromHash(hash), true);
+                return false;
+            }
+
+            if (this.state.getFeature(hash)) {
                 this.showDetail(hash, true);
                 return true;
             }
@@ -911,7 +940,12 @@
             this.mainPage.style.display = 'block'; 
             this.featureDetail.hide(); 
             if (!fromHash) {
-                history.pushState(null, '', window.location.pathname + window.location.search);
+                var currentFilter = this.state.get('currentFilter');
+                if (currentFilter === 'ALL') {
+                    history.pushState(null, '', window.location.pathname + window.location.search);
+                } else {
+                    history.pushState(null, '', '#' + currentFilter.toLowerCase());
+                }
             }
             window.scrollTo({ top: 0, behavior: 'smooth' }); 
         }
@@ -944,7 +978,7 @@
             this.tagFilter = new TagFilter(document.querySelector('.tag-filters'), this.state, this.emitter);
             this.featuresGrid = new FeaturesGrid(document.getElementById('features-grid'), this.state, this.i18n, this.emitter, this.searchBox);
             this.featureDetail = new FeatureDetail(document.getElementById('feature-detail'), this.state, this.i18n, this.lightbox);
-            this.navigation = new NavigationController(document.getElementById('main-page'), this.featureDetail, this.state);
+            this.navigation = new NavigationController(document.getElementById('main-page'), this.featureDetail, this.state, this.tagFilter);
             this.mainText = document.getElementById('main-text');
         }
 
